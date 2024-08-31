@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Record Management System</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Aptos', sans-serif; width: 100%; height: 100%">
+    <div
+      class="bg-image"
+      style="
+        background-image: url(Background/3784896.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      "
+    >
+      <div
+        class="blur-overlay"
+        style="
+          backdrop-filter: blur(5px);
+          background-color: rgba(255, 255, 255, 0.3);
+          height: 100%;
+        "
+      >
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light"
+          style="
+            font-family: 'Aptos', sans-serif;
+            padding: 15px 25px;
+            opacity: 0.85;
+          "
+        >
+          <a
+            class="navbar-brand"
+            href="index.html"
+            style="font-weight: bold; font-size: 1.5rem"
+            >Student Records MS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="insert-student.html"
+                  style="color: black"
+                  >Insert Student</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="show-students.html"
+                  style="color: black"
+                  >Show All Students</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="find-update-delete-student.html"
+                  style="color: black"
+                  >Find/Update/Delete Student</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="container mt-5" style="padding-top: 30px; display: block">
+          <div
+            class="jumbotron text-center"
+            style="
+              background-color: #f8f9fa;
+              padding: 4rem 2rem;
+              opacity: 0.9;
+              border-radius: 20px;
+            "
+          >
+            <h1 class="display-4" style="font-family: 'Aptos', sans-serif">
+              Welcome to the Student Record Management System
+            </h1>
+            <p class="lead">
+              Manage all student records easily and efficiently.
+            </p>
+            <hr class="my-4" />
+            <p>
+              Use the navigation links above to insert, view, update, or delete
+              student records.
+            </p>
+            <a
+              class="btn btn-primary btn-lg"
+              href="insert-student.html"
+              role="button"
+              style="
+                padding: 10px 20px;
+                font-size: 1.25rem;
+                font-family: 'Aptos', sans-serif;
+                margin-top: 15px;
+              "
+              >Insert New Student</a
+            >
+            <a
+              id="changeBackgroundBtn"
+              class="btn btn-primary btn-lg"
+              href="#"
+              role="button"
+              style="
+                padding: 10px 20px;
+                font-size: 1.25rem;
+                font-family: 'Aptos', sans-serif;
+                margin-top: 15px;
+                margin-left: 20px;
+              "
+              >Change Background</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#changeBackgroundBtn").on("click", function (event) {
+          event.preventDefault();
+
+          var backgrounds = [
+            "Background/3801388.jpg",
+            "Background/3784896.png",
+            "Background/flat-lay-educational-elements-arrangement-with-empty-notepad.jpg",
+            "Background/high-angle-teenage-girl-with-headphones-online-school.jpg",
+            "Background/laptop-earphones-near-notepads-pencils.jpg",
+          ];
+
+          var randomBackground =
+            backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+          $(".bg-image").css(
+            "background-image",
+            "url(" + randomBackground + ")"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

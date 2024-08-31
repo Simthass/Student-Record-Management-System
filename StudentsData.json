@@ -1,0 +1,130 @@
+[
+  {
+    "sid": "SA23157828",
+    "firstName": "Simthass",
+    "lastName": "Mohammed",
+    "email": "Simthass@outlook.com",
+    "nearCity": "Kattankudy",
+    "course": "HDIT",
+    "guardian": "Father",
+    "subjects": [
+      "WAD",
+      "ETF",
+      "OOP Java",
+      "SE",
+      "DBMS"
+    ]
+  },
+  {
+    "sid": "SA23189828",
+    "firstName": "Kishalan",
+    "lastName": "P",
+    "email": "Kishalan@gmail.com",
+    "nearCity": "Batticaloa",
+    "course": "Degree",
+    "guardian": "Father",
+    "subjects": [
+      "Maths",
+      "ETF",
+      "IP",
+      "OOP",
+      "Python"
+    ]
+  },
+  {
+    "sid": "SA22557828",
+    "firstName": "Ahamed",
+    "lastName": "Sija",
+    "email": "Sija@outlook.com",
+    "nearCity": "Kattankudy",
+    "course": "Degree",
+    "guardian": "Father",
+    "subjects": [
+      "WAD",
+      "ETF",
+      "Maths",
+      "OOP",
+      "Python"
+    ]
+  },
+  {
+    "sid": "SA23568978",
+    "firstName": "Anushanth",
+    "lastName": "KRA",
+    "email": "Anushanth@gmail.com",
+    "nearCity": "Vavuniya",
+    "course": "HDIT",
+    "guardian": "Father",
+    "subjects": [
+      "WAD",
+      "OOP",
+      "IP",
+      "DSA",
+      "Maths"
+    ]
+  },
+  {
+    "sid": "SA23157852",
+    "firstName": "S",
+    "lastName": "Dirukshan",
+    "email": "Dirukshan@gmail.com",
+    "nearCity": "Batticaloa",
+    "course": "Degree",
+    "guardian": "Father",
+    "subjects": [
+      "OOP",
+      "WAD",
+      "IP",
+      "Maths",
+      "BE"
+    ]
+  },
+  {
+    "sid": "SA23154589",
+    "firstName": "HMSB",
+    "lastName": "Shaanuka",
+    "email": "Shaanuka@gmail.com",
+    "nearCity": "Kurunegala",
+    "course": "Degree",
+    "guardian": "Father",
+    "subjects": [
+      "DSA",
+      "IP",
+      "BE",
+      "WAD",
+      "ETF"
+    ]
+  },
+  {
+    "sid": "SA23458978",
+    "firstName": "Sifrath",
+    "lastName": "Mohammed",
+    "email": "Sifrath@gmail.com",
+    "nearCity": "Kattankudy",
+    "course": "HDIT",
+    "guardian": "Father",
+    "subjects": [
+      "ETF",
+      "WAD",
+      "IP",
+      "SE",
+      "DSA"
+    ]
+  },
+  {
+    "sid": "SA23256895",
+    "firstName": "Joshep",
+    "lastName": "Vijay",
+    "email": "Vijay@gmail.com",
+    "nearCity": "Chennai",
+    "course": "HDIT",
+    "guardian": "Father",
+    "subjects": [
+      "WAD",
+      "ETF",
+      "SE",
+      "IP",
+      "OOP"
+    ]
+  }
+]

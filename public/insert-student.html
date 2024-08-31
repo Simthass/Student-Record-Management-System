@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Student - Student Record Management System</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="font-family: 'Aptos', sans-serif; height: 100%">
+    <div
+      class="bg-image"
+      style="
+        background-image: url(Background/laptop-near-eyeglasses-notepad-headphones-floor.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+      "
+    >
+      <div
+        class="blur-overlay"
+        style="
+          backdrop-filter: blur(5px);
+          background-color: rgba(255, 255, 255, 0.3);
+          height: 100%;
+        "
+      >
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light"
+          style="
+            font-family: 'Aptos', sans-serif;
+            padding: 15px 25px;
+            opacity: 0.85;
+          "
+        >
+          <a
+            class="navbar-brand"
+            href="../index.html"
+            style="font-weight: bold; font-size: 1.5rem"
+            >Student Records MS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="insert-student.html"
+                  style="color: black"
+                  >Insert Student</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="show-students.html"
+                  style="color: black"
+                  >Show All Students</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="find-update-delete-student.html"
+                  style="color: black"
+                  >Find/Update/Delete Student</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div
+          class="container mt-5"
+          style="
+            font-family: 'Aptos', sans-serif;
+            background-color: #f8f9fa;
+            padding: 3rem 2rem;
+            opacity: 0.9;
+            border-radius: 20px;
+          "
+        >
+          <h2 class="text-center mb-4">Insert New Student</h2>
+          <form id="insert-student-form">
+            <div class="form-group">
+              <label for="sid">Student ID (SID)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sid"
+                placeholder="Enter Student ID"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Enter First Name"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Enter Last Name"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter Email"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="nearCity">Nearest City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nearCity"
+                placeholder="Enter Nearest City"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="course">Course</label>
+              <input
+                type="text"
+                class="form-control"
+                id="course"
+                placeholder="Enter Course"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="guardian">Guardian</label>
+              <input
+                type="text"
+                class="form-control"
+                id="guardian"
+                placeholder="Enter Guardian Name"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject1">Subject 1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject1"
+                placeholder="Enter Subject 1"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject2">Subject 2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject2"
+                placeholder="Enter Subject 2"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject3">Subject 3</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject3"
+                placeholder="Enter Subject 3"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject4">Subject 4</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject4"
+                placeholder="Enter Subject 4"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject5">Subject 5</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject5"
+                placeholder="Enter Subject 5"
+                style="font-family: 'Aptos', sans-serif"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              style="
+                padding: 10px 20px;
+                font-size: 1.25rem;
+                font-family: 'Aptos', sans-serif;
+                margin-top: 50px;
+              "
+            >
+              Insert Student
+            </button>
+          </form>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#firstName, #lastName, #nearCity").on("blur", function () {
+          const words = $(this).val().split(" ");
+          for (let i = 0; i < words.length; i++) {
+            words[i] =
+              words[i].charAt(0).toUpperCase() +
+              words[i].slice(1).toLowerCase();
+          }
+          $(this).val(words.join(" "));
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#insert-student-form").on("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          var isValid = true;
+
+          $("input").each(function () {
+            if ($(this).val() === "") {
+              $(this).css("border-color", "red");
+              isValid = false;
+            } else {
+              $(this).css("border-color", "");
+            }
+          });
+
+          if (!isValid) {
+            alert("Please fill out all fields.");
+            return;
+          }
+
+          $("#firstName, #lastName, #nearCity").trigger("blur");
+
+          var studentData = {
+            sid: $("#sid").val(),
+            firstName: $("#firstName").val(),
+            lastName: $("#lastName").val(),
+            email: $("#email").val(),
+            nearCity: $("#nearCity").val(),
+            course: $("#course").val(),
+            guardian: $("#guardian").val(),
+            subjects: [
+              $("#subject1").val(),
+              $("#subject2").val(),
+              $("#subject3").val(),
+              $("#subject4").val(),
+              $("#subject5").val(),
+            ],
+          };
+
+          $.ajax({
+            type: "POST",
+            url: "/api/students",
+            data: JSON.stringify(studentData),
+            contentType: "application/json",
+            success: function (response) {
+              alert("Student inserted successfully!");
+              $("#insert-student-form")[0].reset();
+            },
+            error: function (error) {
+              alert("Error inserting student: " + error.responseText);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

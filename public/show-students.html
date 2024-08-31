@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show All Students - Student Record Management System</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Aptos', sans-serif">
+    <div
+      class="bg-image"
+      style="
+        background-image: url(Background/laptop-near-eyeglasses-notepad-headphones-floor.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+      "
+    >
+      <div
+        class="blur-overlay"
+        style="
+          backdrop-filter: blur(5px);
+          background-color: rgba(255, 255, 255, 0.3);
+          height: 100%;
+        "
+      >
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light"
+          style="
+            font-family: 'Aptos', sans-serif;
+            padding: 15px 25px;
+            opacity: 0.85;
+          "
+        >
+          <a
+            class="navbar-brand"
+            href="index.html"
+            style="font-weight: bold; font-size: 1.5rem"
+            >Student Records MS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="insert-student.html"
+                  style="color: black"
+                  >Insert Student</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="show-students.html"
+                  style="color: black"
+                  >Show All Students</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="find-update-delete-student.html"
+                  style="color: black"
+                  >Find/Update/Delete Student</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div
+          class="container mt-5"
+          style="
+            font-family: 'Aptos', sans-serif;
+            background-color: #f8f9fa;
+            padding: 3rem 2rem;
+            opacity: 0.9;
+            border-radius: 20px;
+            padding-bottom: 50px;
+          "
+          ;
+        >
+          <h2 class="text-center mb-4">All Students</h2>
+          <div class="table-responsive">
+            <table
+              class="table table-striped table-bordered"
+              style="font-family: 'Aptos', sans-serif"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">SID</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Nearest City</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Guardian</th>
+                  <th scope="col">Subjects</th>
+                </tr>
+              </thead>
+              <tbody id="studentsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#studentsTableBody").on("mouseenter", "tr", function () {
+          $(this).css("background-color", "#ffcccc");
+        });
+        $("#studentsTableBody").on("mouseleave", "tr", function () {
+          $(this).css("background-color", "");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "/api/students",
+          method: "GET",
+          success: function (students) {
+            var tableBody = $("#studentsTableBody");
+            students.forEach(function (student) {
+              var row = $("<tr>");
+              row.append($("<td>").text(student.sid));
+              row.append($("<td>").text(student.firstName));
+              row.append($("<td>").text(student.lastName));
+              row.append($("<td>").text(student.email));
+              row.append($("<td>").text(student.nearCity));
+              row.append($("<td>").text(student.course));
+              row.append($("<td>").text(student.guardian));
+              row.append($("<td>").text(student.subjects.join(", ")));
+              tableBody.append(row);
+            });
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching students:", error);
+            alert("Error loading student data. Please try again later.");
+          },
+        });
+      });
+    </script>
+    <script src="../Server.js"></script>
+  </body>
+</html>

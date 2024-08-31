@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find/Update/Delete Student - Student Record Management System</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Aptos', sans-serif">
+    <div
+      class="bg-image"
+      style="
+        background-image: url(Background/laptop-near-eyeglasses-notepad-headphones-floor.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        min-height: 100vh;
+      "
+    >
+      <div
+        class="blur-overlay"
+        style="
+          backdrop-filter: blur(5px);
+          background-color: rgba(255, 255, 255, 0.3);
+          height: 100%;
+          min-height: 100vh;
+        "
+      >
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light"
+          style="
+            font-family: 'Aptos', sans-serif;
+            padding: 15px 25px;
+            opacity: 0.85;
+          "
+        >
+          <a
+            class="navbar-brand"
+            href="index.html"
+            style="font-weight: bold; font-size: 1.5rem"
+            >Student Records MS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="insert-student.html"
+                  style="color: black"
+                  >Insert Student</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="show-students.html"
+                  style="color: black"
+                  >Show All Students</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="find-update-delete-student.html"
+                  style="color: black"
+                  >Find/Update/Delete Student</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div
+          class="container mt-5"
+          style="
+            font-family: 'Aptos', sans-serif;
+            background-color: #f8f9fa;
+            padding: 3rem 2rem;
+            opacity: 0.9;
+            width: 1000px;
+            border-radius: 20px;
+          "
+        >
+          <h2 class="text-center mb-4">Find, Update, or Delete Student</h2>
+
+          <div class="mb-5">
+            <h4>Find Student</h4>
+            <form id="search-form">
+              <div class="form-group">
+                <label for="searchBy">Search By</label>
+                <select class="form-control" id="searchBy" required>
+                  <option value="">Select Search Criterion</option>
+                  <option value="sid">SID</option>
+                  <option value="firstName">First Name</option>
+                  <option value="lastName">Last Name</option>
+                  <option value="email">Email</option>
+                  <option value="nearCity">Nearest City</option>
+                  <option value="course">Course</option>
+                  <option value="guardian">Guardian</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="searchValue">Search Value</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="searchValue"
+                  placeholder="Enter search value"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+
+          <!-- Update/Delete Form -->
+          <div id="student-details" class="d-none">
+            <h4>Student Details</h4>
+            <form id="update-form">
+              <div class="form-group">
+                <label for="sid">Student ID (SID)</label>
+                <input type="text" class="form-control" id="sid" readonly />
+              </div>
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="nearCity">Nearest City</label>
+                <input type="text" class="form-control" id="nearCity" />
+              </div>
+              <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" class="form-control" id="course" />
+              </div>
+              <div class="form-group">
+                <label for="guardian">Guardian</label>
+                <input type="text" class="form-control" id="guardian" />
+              </div>
+              <div class="form-group">
+                <label for="subject1">Subject 1</label>
+                <input type="text" class="form-control" id="subject1" />
+              </div>
+              <div class="form-group">
+                <label for="subject2">Subject 2</label>
+                <input type="text" class="form-control" id="subject2" />
+              </div>
+              <div class="form-group">
+                <label for="subject3">Subject 3</label>
+                <input type="text" class="form-control" id="subject3" />
+              </div>
+              <div class="form-group">
+                <label for="subject4">Subject 4</label>
+                <input type="text" class="form-control" id="subject4" />
+              </div>
+              <div class="form-group">
+                <label for="subject5">Subject 5</label>
+                <input type="text" class="form-control" id="subject5" />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Update Student
+              </button>
+              <button type="button" id="delete-btn" class="btn btn-danger ml-2">
+                Delete Student
+              </button>
+            </form>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $("#search-form").on("submit", function (e) {
+        e.preventDefault();
+        var searchBy = $("#searchBy").val();
+        var searchValue = $("#searchValue").val();
+
+        $.ajax({
+          url: `/api/students/search?${searchBy}=${searchValue}`,
+          method: "GET",
+          success: function (student) {
+            if (student) {
+              $("#student-details").removeClass("d-none");
+              $("#sid").val(student.sid);
+              $("#firstName").val(student.firstName);
+              $("#lastName").val(student.lastName);
+              $("#email").val(student.email);
+              $("#nearCity").val(student.nearCity);
+              $("#course").val(student.course);
+              $("#guardian").val(student.guardian);
+
+              for (let i = 0; i < 5; i++) {
+                $(`#subject${i + 1}`).val(student.subjects[i] || "");
+              }
+            } else {
+              alert("Student not found");
+            }
+          },
+          error: function () {
+            alert("Error occurred while searching");
+          },
+        });
+      });
+
+      $("#update-form").on("submit", function (e) {
+        e.preventDefault();
+        var studentData = {
+          sid: $("#sid").val(),
+          firstName: $("#firstName").val(),
+          lastName: $("#lastName").val(),
+          email: $("#email").val(),
+          nearCity: $("#nearCity").val(),
+          course: $("#course").val(),
+          guardian: $("#guardian").val(),
+          subjects: [
+            $("#subject1").val(),
+            $("#subject2").val(),
+            $("#subject3").val(),
+            $("#subject4").val(),
+            $("#subject5").val(),
+          ].filter(Boolean),
+        };
+
+        $.ajax({
+          url: "/api/students/" + studentData.sid,
+          method: "PUT",
+          contentType: "application/json",
+          data: JSON.stringify(studentData),
+          success: function () {
+            alert("Student updated successfully");
+          },
+          error: function () {
+            alert("Error occurred while updating");
+          },
+        });
+      });
+    </script>
+    <script>
+      $("#delete-btn").on("click", function () {
+        var sid = $("#sid").val();
+
+        if (confirm("Are you sure you want to delete this student?")) {
+          $.ajax({
+            url: "/api/students/" + sid,
+            method: "DELETE",
+            success: function () {
+              alert("Student deleted successfully.");
+              // Clear the form after deletion
+              $("#student-details").addClass("d-none");
+              $("#update-form")[0].reset();
+            },
+            error: function () {
+              alert("Error occurred while deleting the student.");
+            },
+          });
+        }
+      });
+    </script>
+    <script src="../Server.js"></script>
+  </body>
+</html>
